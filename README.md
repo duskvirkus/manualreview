@@ -18,4 +18,4 @@ usage: mvn exec:java -Dexec.mainClass=sketch.App  -Dexec.args="[options]"
  -o,--output_folder <arg>   Folder to save approved images to.
 ```
 
-For easy use consider using `./run.sh` script. In this case put images to review in a directory at path `./in`. Resulting images will show up in `./out`
+For easy use consider using `./run.sh` script. In this case put images to review in a directory at path `./in`. Resulting images will show up in `./out`.
