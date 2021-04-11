@@ -1,6 +1,6 @@
 # Manual Review App
 
-A Processing sketch for manually reviewing images for machine learning. Designed to be started using command line arguments.
+A Processing sketch for manually reviewing images for machine learning datasets.
 
 ![Shows a screenshot of a processing application running with visual studio code in the background. The app has an image up in it of a person looking at a painting and 15 images to the side, with squares that are red or green, followed by an arrow followed, by empty squares.](./images/screenshot.png)
 
