@@ -11,7 +11,7 @@ Install maven and I recommend running in vscode with the java extensions install
 ## Usage
 
 ```
-# message displayed by running ./help
+# message displayed by running ./help.sh
 usage: mvn exec:java -Dexec.mainClass=sketch.App  -Dexec.args="[options]"
  -h,--help                  Print this message.
  -i,--input_folder <arg>    Folder of images to load.
