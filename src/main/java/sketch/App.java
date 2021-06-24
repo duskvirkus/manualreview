@@ -3,8 +3,6 @@ package sketch;
 import java.security.Key;
 import java.util.ArrayList;
 
-
-
 import org.apache.commons.cli.*;
 
 import processing.core.*;
@@ -36,6 +34,7 @@ public class App extends PApplet
 
 		fill(0);
 		text("(a)ccept   (r)eject   (u)ndo", 100, 55);
+		text(q.getStats(), 100, 75);
 	}
 
 	public void keyPressed() {
