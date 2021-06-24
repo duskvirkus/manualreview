@@ -21,6 +21,10 @@ public class PImageQueue {
 
   int currentIndex = 0;
 
+  int approvedCount = 0;
+  int rejectedCount = 0;
+  int reviewedCount = 0;
+
   public PImageQueue(PApplet app, String inputFolder, String outputFolder) {
     this.app = app;
     this.inputFolder = inputFolder;
@@ -48,18 +52,28 @@ public class PImageQueue {
   public void accept() {
     accepted.add(true);
     currentIndex++;
+    approvedCount++;
+    reviewedCount++;
     checkCurrentIndex();
   }
 
   public void reject() {
     accepted.add(false);
     currentIndex++;
+    rejectedCount++;
+    reviewedCount++;
     checkCurrentIndex();
   }
 
   public void undo() {
+    if (accepted.get(accepted.size() - 1)) {
+      approvedCount--;
+    } else {
+      rejectedCount--;
+    }
     accepted.remove(accepted.size() - 1);
     currentIndex--;
+    reviewedCount--;
     checkCurrentIndex();
   }
 
@@ -146,6 +160,10 @@ public class PImageQueue {
     app.stroke(0);
     app.noFill();
     app.rect(x, y, w, h);
+  }
+
+  public String getStats() {
+    return "reviewed " + reviewedCount + "/" + imagePaths.size() + " approved " + approvedCount + " rejected " + rejectedCount;
   }
 
 }
